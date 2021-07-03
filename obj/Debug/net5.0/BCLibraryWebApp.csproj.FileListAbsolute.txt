@@ -144,3 +144,8 @@ C:\Users\Ler\source\repos\BCLibraryWebApp\bin\Debug\net5.0\zh-Hans\Microsoft.Cod
 C:\Users\Ler\source\repos\BCLibraryWebApp\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Ler\source\repos\BCLibraryWebApp\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\Ler\source\repos\BCLibraryWebApp\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+C:\Users\Ler\source\repos\BCLibraryWebApp\obj\Debug\net5.0\Razor\Pages\Books\Create.cshtml.g.cs
+C:\Users\Ler\source\repos\BCLibraryWebApp\obj\Debug\net5.0\Razor\Pages\Books\Delete.cshtml.g.cs
+C:\Users\Ler\source\repos\BCLibraryWebApp\obj\Debug\net5.0\Razor\Pages\Books\Details.cshtml.g.cs
+C:\Users\Ler\source\repos\BCLibraryWebApp\obj\Debug\net5.0\Razor\Pages\Books\Edit.cshtml.g.cs
+C:\Users\Ler\source\repos\BCLibraryWebApp\obj\Debug\net5.0\Razor\Pages\Books\Index.cshtml.g.cs
