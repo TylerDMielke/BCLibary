@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using BCLibraryWebApp.Data;
 using BCLibraryWebApp.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BCLibraryWebApp.Pages.Books
 {
@@ -21,9 +20,32 @@ namespace BCLibraryWebApp.Pages.Books
 
         public IList<Book> Book { get;set; }
 
+        [BindProperty(SupportsGet = true)]
+        public string SearchString { get; set; }
+
+        public SelectList Authors { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string BookAuthor { get; set; }
+
         public async Task OnGetAsync()
         {
-            Book = await _context.Book.ToListAsync();
+            // Select all books using LINQ 
+            var books = from b in _context.Book
+                        select b;
+
+            IQueryable<string> authorQuery = from b in _context.Book
+                                             orderby b.Author
+                                             select b.Author;
+
+            if (!string.IsNullOrEmpty(SearchString))
+                books = books.Where(b => b.Title.Contains(SearchString));
+
+            if (!string.IsNullOrEmpty(BookAuthor))
+                books = books.Where(b => b.Author == BookAuthor);
+
+            Authors = new SelectList(await authorQuery.Distinct().ToListAsync());
+            Book = await books.ToListAsync();
         }
     }
 }
