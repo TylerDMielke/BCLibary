@@ -8,6 +8,7 @@ namespace BCLibraryWebApp.Models
         public int ID { get; set; }
         public string Title { get; set; }
         public string Author { get; set; }
+        public bool CheckedOut { get; set; } 
 
         [Display(Name = "Release Date")]
         [DataType(DataType.Date)]

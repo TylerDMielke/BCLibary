@@ -34,6 +34,7 @@ namespace BCLibraryWebApp.Pages.Books
             var books = from b in _context.Book
                         select b;
 
+            // TODO: Determine if this is needed without author filter
             IQueryable<string> authorQuery = from b in _context.Book
                                              orderby b.Author
                                              select b.Author;
@@ -41,6 +42,7 @@ namespace BCLibraryWebApp.Pages.Books
             if (!string.IsNullOrEmpty(SearchString))
                 books = books.Where(b => b.Title.Contains(SearchString));
 
+            // TODO: Determine if this is needed without author filter
             if (!string.IsNullOrEmpty(BookAuthor))
                 books = books.Where(b => b.Author == BookAuthor);
 

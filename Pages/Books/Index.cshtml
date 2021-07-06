@@ -2,10 +2,10 @@
 @model BCLibraryWebApp.Pages.Books.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Books";
 }
 
-<h1>Index</h1>
+<h1>Books</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -13,9 +13,9 @@
 
 <form>
     <p>
-        <select asp-for="BookAuthor" asp-items="Model.Authors">
+        <!--<select asp-for="BookAuthor" asp-items="Model.Authors">
             <option value="">All</option>
-        </select>
+        </select>-->
         Title: <input type="text" asp-for="SearchString"/>
         <input type="submit" value="Filter" />
     </p>
@@ -31,7 +31,7 @@
                 @Html.DisplayNameFor(model => model.Book[0].Author)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Book[0].ReleaseDate)
+                @Html.DisplayNameFor(model => model.Book[0].CheckedOut)
             </th>
             <th></th>
         </tr>
@@ -46,12 +46,10 @@
                 @Html.DisplayFor(modelItem => item.Author)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ReleaseDate)
+                @Html.DisplayFor(modelItem => item.CheckedOut)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a>
             </td>
         </tr>
 }

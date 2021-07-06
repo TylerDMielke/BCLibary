@@ -24,33 +24,38 @@ namespace BCLibraryWebApp.Models
                     {
                         Title = "Don Quixote",
                         Author = "Miguel De Cervantes",
-                        ReleaseDate = DateTime.Parse("1605-1-1")
+                        ReleaseDate = DateTime.Parse("1605-1-1"),
+                        CheckedOut = false
                     },
                     new Book
                     {
                         Title = "Kubla Khan: or A Vision in a Dream",
                         Author = "Samuel Taylor Coleridge",
-                        ReleaseDate = DateTime.Parse("1797-1-1")
+                        ReleaseDate = DateTime.Parse("1797-1-1"),
+                        CheckedOut = false
                     },
                     new Book
                     {
                         Title = "Crime and Punishment",
                         Author = "Fyodor Dostoevsky",
-                        ReleaseDate = DateTime.Parse("1866-1-1")
+                        ReleaseDate = DateTime.Parse("1866-1-1"),
+                        CheckedOut = false
                     },
                     new Book
                     {
                         Title = "Frankenstein",
                         Author = "Mary Shelley",
-                        ReleaseDate = DateTime.Parse("1823-1-1")
+                        ReleaseDate = DateTime.Parse("1823-1-1"),
+                        CheckedOut = false
                     },
                     new Book
                     {
                         Title = "The Lord of the Rings",
                         Author = "J. R. R. Tolkien",
-                        ReleaseDate = DateTime.Parse("1954-1-1")
+                        ReleaseDate = DateTime.Parse("1954-1-1"),
+                        CheckedOut = false
                     }
-                 );
+                 ); 
                 context.SaveChanges();
             }
         }
