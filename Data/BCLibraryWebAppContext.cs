@@ -15,5 +15,6 @@ namespace BCLibraryWebApp.Data
         }
 
         public DbSet<BCLibraryWebApp.Models.Book> Book { get; set; }
+        public DbSet<BCLibraryWebApp.Models.User> User { get; set; }
     }
 }
