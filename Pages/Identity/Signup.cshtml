@@ -4,7 +4,17 @@
 }
 <h1>Sign Up</h1>
 
+<div>
+    @Model.Message
+</div>
+
 <form method="post">
+    <div class="form-group">
+        <label asp-for="EmailAddress" class="col-form-label col-md-2"></label>
+        <div class="col-md-10">
+            <input asp-for="EmailAddress" />
+        </div>
+    </div>
     <div class="form-group">
         <label asp-for="UserName" class="col-form-label col-md-2"></label>
         <div class="col-md-10">
@@ -18,6 +28,6 @@
         </div>
     </div>
     <div class="form-group">
-        <button class="btn btn-outline-primary btn-sm">Log in</button>
+        <button class="btn btn-outline-primary btn-sm">Sign Up</button>
     </div>
 </form>

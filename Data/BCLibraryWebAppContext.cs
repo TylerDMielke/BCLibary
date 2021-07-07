@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BCLibraryWebApp.Models;
 using Microsoft.EntityFrameworkCore;
-using BCLibraryWebApp.Models;
 
 namespace BCLibraryWebApp.Data
 {
@@ -14,7 +10,7 @@ namespace BCLibraryWebApp.Data
         {
         }
 
-        public DbSet<BCLibraryWebApp.Models.Book> Book { get; set; }
-        public DbSet<BCLibraryWebApp.Models.User> User { get; set; }
+        public DbSet<Book> Book { get; set; }
+        public DbSet<User> User { get; set; }
     }
 }
